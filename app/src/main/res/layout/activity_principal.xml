@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/grisClaro"
+    tools:context=".PrincipalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtTituloModal"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            android:layout_weight="0.8"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MENU PRINCIPAL"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/grisClaro"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnContestar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bk_boton_plano"
+                android:text="CONTESTAR PREGUNTAS"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/negro"/>
+
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bk_boton_plano"
+                android:text="EDITAR RESPUESTAS"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/negro"/>
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bk_boton_plano"
+                android:text="ELIMINAR RESPUESTAS"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/negro"/>
+
+
+            <Button
+                android:id="@+id/btnListado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bk_boton_plano"
+                android:text="VER CHISMÓGRAFO"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/negro"/>
+
+        </LinearLayout>
+
+
+</LinearLayout>
