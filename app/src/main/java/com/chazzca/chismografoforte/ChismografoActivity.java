@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 
 import com.chazzca.chismografoforte.Interfaces.UrlInterface;
 import com.chazzca.chismografoforte.models.ListaPreguntas;
@@ -37,6 +38,7 @@ public class ChismografoActivity extends AppCompatActivity {
     private RecyclerView recyclerListadoChisme;
     private RecyclerView.LayoutManager mLayoutManager;
     private ListaAdapter listAdapter;
+    private Button btnEnviar;
     private ArrayList<ModeloListado> arrayListaUsuarios  = new ArrayList<>();
     Retrofit retrofit;
 
@@ -51,7 +53,20 @@ public class ChismografoActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerListadoChisme.setLayoutManager(mLayoutManager);
 
+        btnEnviar = findViewById(R.id.btnEnviarCorreo);
 
+        btnEnviar.setOnClickListener(view -> {
+
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(ChismografoActivity.this);
+            builder.setTitle("Próximamente");
+            builder.setMessage("Disculpa la molestia D:")
+                    .setNegativeButton("Aceptar", (dialog, id) -> {
+                        dialog.dismiss();
+                    });
+            android.app.AlertDialog dialog = builder.create();
+            dialog.show();
+
+        });
 
         getListadoChisme();
 

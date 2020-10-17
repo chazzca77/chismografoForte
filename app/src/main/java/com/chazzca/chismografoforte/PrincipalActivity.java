@@ -68,6 +68,18 @@ public class PrincipalActivity extends AppCompatActivity {
 
         });
 
+
+        btnEditar.setOnClickListener(view -> {
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(PrincipalActivity.this);
+            builder.setTitle("Próximamente");
+            builder.setMessage("Disculpa la molestia D:")
+                    .setNegativeButton("Aceptar", (dialog, id) -> {
+                        dialog.dismiss();
+                    });
+            android.app.AlertDialog dialog = builder.create();
+            dialog.show();
+        });
+
         getPreguntas();
     }
 
